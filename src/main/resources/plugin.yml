@@ -1,0 +1,9 @@
+name: EasySpawnPoint
+version: 1.0.0
+main: pers.zhangyang.easyspawnpoint.EasySpawnPoint
+api-version: 1.13
+commands:
+  EasySpawnPoint:
+    aliases: esp
+softdepend:
+  - Vault

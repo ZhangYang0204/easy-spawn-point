@@ -1,0 +1,9 @@
+completer:
+
+  #当输入了/easySpawnPoint后将提示补全以下内容
+  easySpawnPoint:
+    - "help"
+    - "reloadPlugin"
+    - "correctYaml"
+    - "openGui"
+    - "openMui"

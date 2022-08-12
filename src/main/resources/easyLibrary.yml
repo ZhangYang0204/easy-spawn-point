@@ -1,0 +1,10 @@
+
+daoPackage: []
+listenerPackage:
+  - "pers/zhangyang/easyspawnpoint/listener"
+executorPackage:
+  - "pers/zhangyang/easyspawnpoint/executor"
+yamlPackage:
+  - "pers/zhangyang/easyspawnpoint/yaml"
+guiButtonHandlerPackage:
+  - "pers/zhangyang/easyspawnpoint/listener"
