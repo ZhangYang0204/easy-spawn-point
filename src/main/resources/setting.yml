@@ -17,7 +17,8 @@ setting:
   #Birthpoint, will overwrite all birth-related teleportation, but will not change the birth block
   spawnPoint:
 
-    #WorldNames
+    #世界的名字，如果不填或者填错，采用默认值
+    #world, if not filled in or filled in incorrectly, the default value is used
     worldName: "world"
 
     #x坐标，不填默认为0.0，如果是整数也要带上小数，例如0写为0.0
