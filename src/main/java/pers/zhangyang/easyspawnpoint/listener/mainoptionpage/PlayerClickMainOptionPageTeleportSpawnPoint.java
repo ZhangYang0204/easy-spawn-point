@@ -49,7 +49,7 @@ public class PlayerClickMainOptionPageTeleportSpawnPoint implements Listener {
             }
         }
 
-        Double cost=SettingYaml.INSTANCE.teleportSpawnPointCost();
+        Double cost=SettingYaml.INSTANCE.getNonnegativeDouble("setting.teleportSpawnPointCost");
         if (cost!=null) {
             if (Vault.hook()==null){
                 List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.notHookVault");
@@ -66,7 +66,7 @@ public class PlayerClickMainOptionPageTeleportSpawnPoint implements Listener {
 
 
 
-        player.teleport(SettingYaml.INSTANCE.getSpawnPoint());
+        player.teleport(SettingYaml.INSTANCE.getLocationDefault("setting.spawnPoint"));
         Gamer gamer = GamerManager.INSTANCE.getGamer(onlineOwner);
         gamer.setLastTeleportPointTime(System.currentTimeMillis());
 

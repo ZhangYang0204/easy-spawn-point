@@ -9,27 +9,34 @@ setting:
   display: "default"
 
 
-  #传送一次花费的Vault金币，必须是非负数，如果不填或者不合理，默认为空，空代表不话费金币
+  #传送一次花费的Vault金币，必须是非负数，如果不填或者不合理，默认为空，空代表不使用Vault功能
+  #Vault coins spent for one transmission, must be non-negative, if not filled or unreasonable, the default is empty, empty means not using the Vault function
   teleportSpawnPointCost: 0
 
   #出生点，会覆盖所有跟出生有关的传送，但是不会改变出生区块
+  #Birthpoint, will overwrite all birth-related teleportation, but will not change the birth block
   spawnPoint:
 
-    #世界的名字，不填默认为world
+    #WorldNames
     worldName: "world"
 
     #x坐标，不填默认为0.0，如果是整数也要带上小数，例如0写为0.0
+    #x coordinate, not fill the default is 0.0, if it is an integer also need to bring the decimal, for example, 0 written as 0.0
     x: 0.0
 
     #y坐标，不填默认为80.0，如果是整数也要带上小数，例如0写为0.0
+    #y coordinate, not fill the default is 0.0, if it is an integer also need to bring the decimal, for example, 0 written as 0.0
     y: 80.0
 
     #z坐标，不填默认为0.0，如果是整数也要带上小数，例如0写为0.0
+    #z coordinate, not fill the default is 0.0, if it is an integer also need to bring the decimal, for example, 0 written as 0.0
     z: 0.0
 
     #pitch，不填默认为0.0，如果是整数也要带上小数，例如0写为0.0
+    #pitch, do not fill in the default 0.0, if it is an integer should also bring a decimal, for example, 0 written as 0.0
     pitch: 0.0
 
     #yaw，不填默认为0.0，如果是整数也要带上小数，例如0写为0.0
+    #yaw, do not fill in the default 0.0, if it is an integer should also bring a decimal, for example, 0 written as 0.0
     yaw: 0.0
 

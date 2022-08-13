@@ -1,6 +1,6 @@
 completer:
 
-  #当输入了/easySpawnPoint后将提示补全以下内容
+  #When you type /easySpawnPoint you will be prompted to complete the following
   easySpawnPoint:
     - "help"
     - "reloadPlugin"

@@ -24,31 +24,5 @@ public class SettingYaml extends YamlBase {
         return display;
     }
 
-    @Nullable
-    public Double teleportSpawnPointCost() {
-        Double display = getDouble("setting.teleportSpawnPointCost");
-        if (display!=null&&display<0){
-            display=0.0;
-        }
-        return display;
-    }
-
-    @NotNull
-    public Location getSpawnPoint(){
-        String worldName=getStringDefault("setting.spawnPoint.worldName");
-        Double x=getDoubleDefault("setting.spawnPoint.x");
-        Double y=getDoubleDefault("setting.spawnPoint.y");
-        Double z=getDoubleDefault("setting.spawnPoint.z");
-        Double yawD=getDoubleDefault("setting.spawnPoint.yaw");
-        Double pitchD=getDoubleDefault("setting.spawnPoint.pitch");
-
-        World world= Bukkit.getWorld(worldName);
-        if (world==null){
-            world=Bukkit.getWorld("world");
-        }
-        float yaw=yawD.floatValue();
-        float pitch=pitchD.floatValue();
-        return new Location(world,x,y,z,yaw,pitch);
-    }
 
 }

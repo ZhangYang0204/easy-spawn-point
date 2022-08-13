@@ -8,6 +8,7 @@ import org.jetbrains.annotations.Nullable;
 import pers.zhangyang.easylibrary.base.BackAble;
 import pers.zhangyang.easylibrary.base.GuiPage;
 import pers.zhangyang.easylibrary.base.SingleGuiPageBase;
+import pers.zhangyang.easylibrary.util.CommandUtil;
 import pers.zhangyang.easyspawnpoint.yaml.GuiYaml;
 
 import java.util.List;
@@ -21,10 +22,10 @@ public class MainOptionPage extends SingleGuiPageBase implements BackAble {
     @Override
     public void refresh() {
         this.inventory.clear();
-        ItemStack returnPage= GuiYaml.INSTANCE.getButton("gui.button.mainOptionPage.back");
+        ItemStack returnPage= GuiYaml.INSTANCE.getButtonDefault("gui.button.mainOptionPage.back");
         this.inventory.setItem(49,returnPage);
 
-        ItemStack teleportSpawnPoint= GuiYaml.INSTANCE.getButton("gui.button.mainOptionPage.teleportSpawnPoint");
+        ItemStack teleportSpawnPoint= GuiYaml.INSTANCE.getButtonDefault("gui.button.mainOptionPage.teleportSpawnPoint");
         this.inventory.setItem(22,teleportSpawnPoint);
         viewer.openInventory(this.inventory);
     }
@@ -35,22 +36,6 @@ public class MainOptionPage extends SingleGuiPageBase implements BackAble {
         if (cmdList==null){
             return;
         }
-        for (String s:cmdList){
-            String[] args=s.split(":");
-            if (args.length!=2){
-                continue;
-            }
-            String way=args[0];
-            String command=args[1];
-            if ("console".equalsIgnoreCase(way)){
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(),command);
-            }else if ("player".equalsIgnoreCase(way)){
-                Bukkit.dispatchCommand(viewer,command);
-            }else if ("operator".equalsIgnoreCase(way)){
-                viewer.setOp(true);
-                Bukkit.dispatchCommand(viewer,command);
-                viewer.setOp(false);
-            }
-        }
+        CommandUtil.dispatchCommandList(viewer,cmdList);
     }
 }

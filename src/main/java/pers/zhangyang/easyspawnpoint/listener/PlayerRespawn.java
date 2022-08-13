@@ -11,7 +11,7 @@ public class PlayerRespawn implements Listener {
     @EventHandler
     public void on(PlayerRespawnEvent event){
 
-        event.setRespawnLocation(SettingYaml.INSTANCE.getSpawnPoint());
+        event.setRespawnLocation(SettingYaml.INSTANCE.getLocationDefault("setting.spawnPoint"));
 
 
     }
