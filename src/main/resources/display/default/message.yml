@@ -43,9 +43,9 @@ message:
     teleportSpawnPoint:
       - "&c&l前往了重生点。"
 
-    notEnoughVaultWhenTeleportSpawnPoint:
+    notEnoughVault:
       - "&c&l钱不够，不能传送。"
-    tooFastWhenTeleportSpawnPoint:
+    tooFast:
       - "&c&l传送速度太快了。"
 
 

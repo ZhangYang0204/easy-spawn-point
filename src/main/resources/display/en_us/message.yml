@@ -44,7 +44,7 @@ message:
     teleportSpawnPoint:
       - "&c&l Traveled to respawn point."
 
-    notEnoughVaultWhenTeleportSpawnPoint:
+    notEnoughVault:
       - "&c&l didn't have enough money to teleport."
-    tooFastWhenTeleportSpawnPoint:
+    tooFast:
       - "&c&l Teleporting too fast."

@@ -43,7 +43,7 @@ public class PlayerClickMainOptionPageTeleportSpawnPoint implements Listener {
             if (gamer.getLastTeleportPointTime() != null && System.currentTimeMillis() - gamer.getLastTeleportPointTime()
                     < perm * 1000L) {
 
-                List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.tooFastWhenTeleportSpawnPoint");
+                List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.tooFast");
                 MessageUtil.sendMessageTo(player, list);
                 return;
             }
@@ -57,7 +57,7 @@ public class PlayerClickMainOptionPageTeleportSpawnPoint implements Listener {
                 return;
             }
             if (Vault.hook().getBalance(onlineOwner)<cost){
-                List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.notEnoughVaultWhenTeleportSpawnPoint");
+                List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.notEnoughVault");
                 MessageUtil.sendMessageTo(player, list);
                 return;
             }
