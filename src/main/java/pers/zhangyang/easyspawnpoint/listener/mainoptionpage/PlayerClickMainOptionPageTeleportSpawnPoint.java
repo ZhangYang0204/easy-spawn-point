@@ -70,8 +70,6 @@ public class PlayerClickMainOptionPageTeleportSpawnPoint implements Listener {
         Gamer gamer = GamerManager.INSTANCE.getGamer(onlineOwner);
         gamer.setLastTeleportPointTime(System.currentTimeMillis());
 
-        mainOptionPage.refresh();
-
         List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.teleportSpawnPoint");
         MessageUtil.sendMessageTo(player, list);
 
