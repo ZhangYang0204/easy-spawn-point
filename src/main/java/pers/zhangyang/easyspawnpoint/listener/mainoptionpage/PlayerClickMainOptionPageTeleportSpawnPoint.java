@@ -18,7 +18,7 @@ import java.util.List;
 
 @EventListener
 public class PlayerClickMainOptionPageTeleportSpawnPoint implements Listener {
-    @GuiDiscreteButtonHandler(guiPage = MainOptionPage.class,slot = {22})
+    @GuiDiscreteButtonHandler(guiPage = MainOptionPage.class,slot = {22},refreshGui = false,closeGui = true)
     public void on(InventoryClickEvent event){
 
 
